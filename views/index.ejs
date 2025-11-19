@@ -8,7 +8,13 @@
 </head>
 
 <body>
-  <!-- Write your code here -->
+  <!-- Use 'locals' to safeguard your website.-->
+   <% if (locals.name) { %>
+    <h1>Your name has <%= name.length %> letters!</h1>
+    <% } else { %>
+      <h1>Type Your Name:</h1>
+      <% } %>
+
   <form action="/submit" method="POST">
     <input type="text" name="fName" placeholder="First name">
     <input type="text" name="lName" placeholder="Last name">
